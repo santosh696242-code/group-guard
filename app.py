@@ -100,7 +100,7 @@ def handle_all_messages(message):
     if count < 5:
         try:
             bot.delete_message(chat_id, message.message_id)
-            warning_text = f"⚠️ @{message.from_user.username or message.from_user.first_name}, aapko message karne ke liye group me kam se kam 5 members add karne honge. Aapne abhi tak {count} members add kiye hain."
+            warning_text = f"⚠️ @{message.from_user.username or message.from_user.first_name}, group me message karne ke liye pehle 5 members add karein! (Aapne {count}/5 add kiye hain)"
             warning_msg = bot.send_message(chat_id, warning_text)
             
             # 7 seconds baad warning message automatic delete ho jayega taaki group me spam na ho
